@@ -1,0 +1,49 @@
+package dimensiones;
+
+import java.util.Scanner;
+
+public class Dimensiones {
+
+    
+    public static void main(String[] args) {
+        
+        float promedio = 0 ;
+        Scanner entrada = new Scanner (System.in);
+        String datos [] [] = new String [30] [3] ;
+        float nota [] [] = new float [30] [4];
+         for (int i = 0; i < 30; i++) {
+             for (int j = 0; j < 3; j++) {
+                  if (j <= 2) {
+                       System.out.println("Nombre del Estudiante");
+                       datos [i][j] = entrada.next();
+                       System.out.println("Apellido del Estudiante");
+                       datos [i][j] = entrada.next();
+                       System.out.println("Curso del Estudiante");
+                       datos [i][j] = entrada.next();
+                    }
+                  if (j > 2) {
+                       System.out.println("Lenguaje");
+                       nota [i][j] = entrada.nextFloat();
+                       System.out.println("Matematica");
+                       nota [i][j] = entrada.nextFloat();
+                       System.out.println("Ingles");
+                       nota [i][j] = entrada.nextFloat();
+                       System.out.println("Historia");
+                       nota [i][j] = entrada.nextFloat();                       
+                 }
+              }
+           }
+           for (int i = 0; i < 30; i++) {
+               promedio = (nota[i][0] + nota [i][1] + nota [i][2] + nota [i][3]) /4;
+               if (promedio >= 4) {
+                   System.out.println(datos[i][0] + "" + datos [i][1] + "" + datos[i][2] + "" + nota[i][0] + "" + nota[i][1] + "" + nota[i][2]);
+                  
+               }
+               System.out.println("");
+        }
+    
+         
+        
+    }
+    
+}
