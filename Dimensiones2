@@ -19,17 +19,23 @@ public class Dimensiones2 {
             datos[i][1] = entrada.next();
             System.out.println("Ingrese el curso del estudiante");
             datos[i][2] = entrada.next();
-            
-            System.out.println("Lenguaje");
-            nota [i][0] = entrada.nextFloat();
-            System.out.println("Matematica");
-            nota [i][1] = entrada.nextFloat();
-            System.out.println("Ingles");
-            nota [i][2] = entrada.nextFloat();
-            System.out.println("Historia");
-            nota [i][3] = entrada.nextFloat(); 
+            do {
+                System.out.println("Lenguaje");
+                nota [i][0] = entrada.nextFloat();    
+            } while (nota [i][0] <  1 || nota [i][0] > 7);
+            do {
+                 System.out.println("Matematica");
+                 nota [i][1] = entrada.nextFloat();
+            } while (nota [i][0] < 1 || nota [i][0] > 7);
+            do {
+                 System.out.println("Ingles");
+                 nota [i][2] = entrada.nextFloat();
+            } while (nota [i][0] < 1 || nota [i][0] > 7);
+            do {
+                 System.out.println("Historia");
+                 nota [i][3] = entrada.nextFloat(); 
+            } while (nota [i][0] < 1 || nota [i][0] > 7);
         }
-        
         for (int j = 0; j < 2; j++) {
              
             promedio = (nota[j][0] + nota [j][1] + nota [j][2] + nota [j][3]) /4;
@@ -40,5 +46,3 @@ public class Dimensiones2 {
                }
         }
     }
-    
-}
